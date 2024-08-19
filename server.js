@@ -10,6 +10,7 @@ const etatRoutes = require('./routes/etatRoutes');
 const entrepriseRoutes = require('./routes/entrepriseRoutes');
 const listediffusionRoutes = require('./routes/listeRoutes');
 const contactRoutes = require('./routes/contactRoutes');
+const campagneRoutes = require('./routes/campagneRoutes');
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocs = require('./SwaggerConfig');
 
@@ -25,6 +26,7 @@ app.use('/api', etatRoutes);
 app.use('/api', entrepriseRoutes);
 app.use('api',listediffusionRoutes);
 app.use('/api', contactRoutes);
+app.use('/api', campagneRoutes);
 
 // Swagger route
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
